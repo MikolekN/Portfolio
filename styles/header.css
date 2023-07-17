@@ -1,0 +1,23 @@
+header {
+  font-size: 150%;
+  background-color: grey;
+  height: 200px;
+  display: flex;
+}
+header img {
+  padding: 1%;
+  max-height: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+header div {
+  text-align: start;
+  align-self: center;
+  padding: 2%;
+  margin: 0;
+}
+.header-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin: 0;
+}

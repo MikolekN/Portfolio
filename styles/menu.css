@@ -1,0 +1,28 @@
+#menu.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+#menu ul {
+  font-size: 125%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+  text-align: center;
+}
+#menu ul li {
+  display: inline-block;
+}
+#menu ul li a {
+  display: inline-block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  transition: transform .1s;
+}
+#menu ul li a:hover {
+  background-color: #111111;
+  transform: scale(1.15);
+}
