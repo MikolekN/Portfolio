@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mikołaj Nadzieja</title>
-    <link rel="icon" href="./assets/images/fallback_icon.png">
+    <link rel="icon" href="./assets/images/icon.png">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/menu.css">
@@ -15,25 +15,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Flex:wght@300;400&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
 </head>
 
 <body>
     <header>
-        <img src="./assets/images/icon.jpg" onerror="this.src='./assets/images/fallback_icon.png'" alt="Creators portrait image." />
-        <div>
-            <h1 class="header-text">Mikołaj Nadzieja</h1>
-            <h2 class="header-text">Software Developer</h2>
-        </div>
+        <nav>
+            <a href="index.html">
+                <img src="./assets/images/logo.png" onerror="this.src='./assets/images/fallback_icon.png'" alt="Creators portrait image." />
+            </a>
+            <div id="menu">
+                <i class="fa fa-times" aria-hidden="true"></i>
+                <ul>
+                    <li class="menu-list-item"><a href="#contactDetails" class="menu-list-item-anchor">Contact details</a></li>
+                    <li class="menu-list-item"><a href="#skills" class="menu-list-item-anchor">Skills</a></li>
+                    <li class="menu-list-item"><a href="#projects" class="menu-list-item-anchor">Projects</a></li>
+                    <li class="menu-list-item"><a href="#education" class="menu-list-item-anchor">Education</a></li>
+                </ul>   
+            </div> 
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </nav>
     </header>
 
-    <div id="menu">
-        <ul id="menu-list">
-            <li class="menu-list-item"><a href="#contactDetails" class="menu-list-item-anchor">Contact details</a></li>
-            <li class="menu-list-item"><a href="#profile" class="menu-list-item-anchor">Profile</a></li>
-            <li class="menu-list-item"><a href="#skills" class="menu-list-item-anchor">Skills</a></li>
-            <li class="menu-list-item"><a href="#projects" class="menu-list-item-anchor">Projects</a></li>
-            <li class="menu-list-item"><a href="#education" class="menu-list-item-anchor">Education</a></li>
-        </ul>
+    <div id="profile">
+        <h1>Mikołaj Nadzieja</h1>
+        <p>I'm a third-year computer science student at the Gdansk University of Technology. <br />
+        I enjoy taking on new challenges, especially ones that test my  abilities. I try to always learn new things and use them in the next project I take on. <br />
+        Currently, I'm searching for summer internships.</p>
+        <a href="#contactDetails">Get to know me</a>
     </div>
 
     <div id="contactDetails">
@@ -45,13 +54,6 @@
             <li><a href="https://linkedin.com/in/mikolaj-nadzieja/">Linkedin</a></li>
             <li><a href="https://github.com/MikolekN/">Github</a></li>
         </ul>
-    </div>
-
-    <div id="profile">
-        <h3>Profile</h3>
-        I'm a third-year computer science student at the Gdansk University of Technology. <br />
-        I enjoy taking on new challenges, especially ones that test my  abilities. I try to always learn new things and use them in the next project I take on. <br />
-        Currently, I'm searching for summer internships.
     </div>
 
     <div id="skills">
