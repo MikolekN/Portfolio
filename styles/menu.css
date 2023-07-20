@@ -32,21 +32,34 @@
 }
 nav .fa {
   display: none;
+  color: #fff;
+  cursor: pointer;
+}
+#close {
+  align-items: center;
+  display: none;
+  padding: 0 5px;
+  height: 100%;
+  color:#000;
+  cursor: pointer;
 }
 @media(max-width: 700px) {
   #menu {
-    position: absolute;
-    background: #fff;
-    height: 100vh;
-    width: 200px;
     top: 0;
-    right: -200px;
+    position: fixed;
+    background-image: linear-gradient(to right,rgb(190, 190, 190), white);
+    display: flex;
+    right: 0;
+    height: 100vh;
+    width: 150px;
+    top: 0;
+    right: -150px;
     text-align: center;
     z-index: 2;
     transition: 1s;
   }
   #menu ul{
-    padding: 30px;
+    padding: 10px;
   }
   #menu ul li{
     display: block;
@@ -58,12 +71,14 @@ nav .fa {
     background-color: #000;
   }
   #menu ul li:hover::after {
-    width: 50%;
+    width: 75%;
   }
   nav .fa {
     display: block;
     margin: 10px;
-    cursor: pointer;
+  }
+  #close {
+    display: flex;
   }
 }
 /*#menu.sticky {

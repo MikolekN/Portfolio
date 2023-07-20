@@ -52,4 +52,8 @@ header nav img {
     font-size: 20px;
     margin: 10px 0;
   }
+  header nav img {
+    width: 100px;
+    border-radius: 50%;
+  }  
 }
