@@ -9,52 +9,93 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/menu.css">
+    <link rel="stylesheet" href="./styles/projects.css">
     <link rel="stylesheet" href="./styles/scroll_top_button.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Flex:wght@300;400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Flex:wght@300;400&display=swap"
+        rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/aa8d321bbb.js" crossorigin="anonymous"></script>
+
 <body>
     <header>
         <nav>
             <a href="index.html">
-                <img src="./assets/images/logo.png" onerror="this.src='./assets/images/icon.png'" alt="Creators portrait image." />
+                <img src="./assets/images/logo.png" onerror="this.src='./assets/images/icon.png'"
+                    alt="Creators portrait image." />
             </a>
             <div id="menu">
-                <i class="fa-solid fa-play"id="close" onclick="hideMenu()"></i>
+                <i class="fa-solid fa-play" id="close" onclick="hideMenu()"></i>
                 <ul>
-                    <li class="menu-list-item"><a href="#contactDetails" class="menu-list-item-anchor">Contact details</a></li>
+                    <li class="menu-list-item"><a href="#contactDetails" class="menu-list-item-anchor">Contact
+                            details</a></li>
                     <li class="menu-list-item"><a href="#skills" class="menu-list-item-anchor">Skills</a></li>
                     <li class="menu-list-item"><a href="#projects" class="menu-list-item-anchor">Projects</a></li>
                     <li class="menu-list-item"><a href="#education" class="menu-list-item-anchor">Education</a></li>
-                </ul>   
-            </div> 
+                </ul>
+            </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
+        <section id="profile">
+            <h1>Mikołaj Nadzieja</h1>
+            <p>
+                I'm a third-year computer-science student at the Gdansk University of Technology, eager to utilize my  passion for continuous learning in real-world projects.<br />
+                I approach each task with enthusiasm and enjoy taking on new challenges, especially ones that test my abilities.<br />
+                My studies have provided me with a strong foundation in computer science principles, programming languages, and problem-solving skills.<br />
+                Currently, I am searching for summer internships.
+            </p>
+            <a href="#contactDetails">Get to know me</a>
+        </section>    
     </header>
 
-    <div id="profile">
-        <h1>Mikołaj Nadzieja</h1>
-        <p>I'm a third-year computer science student at the Gdansk University of Technology. <br />
-        I enjoy taking on new challenges, especially ones that test my  abilities. I try to always learn new things and use them in the next project I take on. <br />
-        Currently, I'm searching for summer internships.</p>
-        <a href="#contactDetails">Get to know me</a>
-    </div>
+    <section id="projects">
+        <h1 class="title">Projects</h1>
+        <ul>
+            <li class="project">
+                <div>
+                    <div>
+                        <img src="assets\images\tetris.png" alt="" class="projectImage"/>
+                    </div>
+                    <div class="projectDescription" >
+                        <h1>GUIZEROChallenge</h1>
+                        <p>
+                            Hallo
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="project">
+                <div>
+                    <div>
+                        <img src="assets\images\tetris.png" alt="" class="projectImage"/>
+                    </div>
+                    <div class="projectDescription" >
+                        <h1>GUIZEROChallenge</h1>
+                        <p>
+                            Hallo
+                        </p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
 
-    <div id="contactDetails">
-        <h3>Contact details:</h3>
+    <section id="contactDetails">
+        <h1 class="title">Contact details:</h1>
         <ul>
             <li>Gdańsk</li>
             <li>+48 508 658 445</li>
             <li>mikolaj.nadzieja@wp.pl</li>
             <li><a href="https://linkedin.com/in/mikolaj-nadzieja/">Linkedin</a></li>
             <li><a href="https://github.com/MikolekN/">Github</a></li>
+            <li><a href="./index.html">Website</a></li>
         </ul>
-    </div>
+    </section>
 
-    <div id="skills">
+    <section id="skills">
         <h3>Skills</h3>
         <ul>
             <li>
@@ -86,55 +127,9 @@
                 </ul>
             </li>
         </ul>
-    </div>
+    </section>
 
-    <div class="projects">
-        <h3>Projects</h3>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
-
-    <div id="education">
+    <section id="education">
         <h3>Education</h3>
         <ul>
             <li>
@@ -144,12 +139,13 @@
                 2020 – PRESENT
             </li>
         </ul>
-    </div>
+    </section>
 
     <button onclick="window.scrollTo(0, 0);" id="scrollButton" class="hidden">^</button>
 
     <footer>
-        I hereby give consent for my personal data included in this page to be processed for the purposes of any recruitment processes. <br/>
+        I hereby give consent for my personal data included in this page to be processed for the purposes of any
+        recruitment processes. <br />
         I also consent to processing of my personal data for the purposes of any future recruitment processes.
     </footer>
 
