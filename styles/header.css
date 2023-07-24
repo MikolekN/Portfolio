@@ -1,6 +1,6 @@
 header {
   background-color: grey;
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../assets/images/background.png');
   background-position: center;
@@ -16,42 +16,7 @@ header nav img {
   width: 150px;
   border-radius: 50%;
 }
-#profile {
-  width: 90%;
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-#profile h1 {
-  font-size: 62px;
-  margin: 10px 0;
-}
-#profile p {
-  margin: 10px 0 40px;
-}
-#profile a {
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-  border: 1px double #fff;
-  padding: 10px 40px;
-  background: transparent;
-  position: relative;
-  cursor: pointer;
-}
-#profile a:hover {
-  background: #fff;
-  transition: 1s;
-  color: #000;
-}
 @media(max-width: 700px) {
-  #profile h1 {
-    font-size: 20px;
-    margin: 10px 0;
-  }
   header nav img {
     width: 100px;
     border-radius: 50%;

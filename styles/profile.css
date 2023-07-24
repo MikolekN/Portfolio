@@ -1,0 +1,37 @@
+#profile {
+  width: 75%;
+  color: #fff;
+  position: absolute;
+  text-align: center;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#profile h1 {
+  font-size: 62px;
+  margin: 10px 0;
+}
+#profile p {
+  margin: 10px 0 40px;
+}
+#profile a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px double #fff;
+  padding: 10px 40px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+#profile a:hover {
+  background: #fff;
+  transition: 1s;
+  color: #000;
+}
+@media (max-width: 700px) {
+  #profile h1 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+}
