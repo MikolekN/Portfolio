@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="./styles/profile.css">
     <link rel="stylesheet" href="./styles/menu.css">
     <link rel="stylesheet" href="./styles/projects.css">
+    <link rel="stylesheet" href="./styles/skills.css">
+    <link rel="stylesheet" href="./styles/education.css">
+    <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/contact_details.css">
     <link rel="stylesheet" href="./styles/scroll_top_button.css">
 
@@ -23,36 +26,51 @@
     <script src="https://kit.fontawesome.com/aa8d321bbb.js" crossorigin="anonymous"></script>
 
 <body>
+
+    <!-- PAGE HEADER -->
     <header>
         <nav>
             <a href="index.html">
                 <img src="./assets/images/logo.png" onerror="this.src='./assets/images/icon.png'"
                     alt="Creators portrait image." />
             </a>
-            <div id="menu">
+            <div id="header-menu" class="small-screen">
                 <i class="fa-solid fa-play" id="close" onclick="hideMenu()"></i>
-                <ul>
-                    <li class="menu-list-item"><a href="#contactDetails" class="menu-list-item-anchor">Contact
+                <ul id="header-menu-list">
+                    <li><a href="#contactDetails">Contact
                             details</a></li>
-                    <li class="menu-list-item"><a href="#skills" class="menu-list-item-anchor">Skills</a></li>
-                    <li class="menu-list-item"><a href="#projects" class="menu-list-item-anchor">Projects</a></li>
-                    <li class="menu-list-item"><a href="#education" class="menu-list-item-anchor">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
     </header>
 
-    <section id="profile">
-        <h1>Mikołaj Nadzieja</h1>
+    <div id="profile">
+        <h1 class="title">Mikołaj Nadzieja</h1>
         <p>
-            I'm a third-year computer-science student at the Gdansk University of Technology, eager to utilize my  passion for continuous learning in real-world projects.<br />
-            I approach each task with enthusiasm and enjoy taking on new challenges, especially ones that test my abilities.<br />
+            I'm a third-year computer-science student at the Gdansk University of Technology, eager to utilize my skills in real-world projects.<br />
+            I approach each task with enthusiasm and enjoy taking on new challenges.<br />
             My studies have provided me with a strong foundation in computer science principles, programming languages, and problem-solving skills.<br />
+            <br />
             Currently, I am searching for summer internships.
         </p>
-        <a href="#contactDetails">Get to know me</a>
-    </section>    
+        <a href="#main-menu">Get to know me</a>
+    </div>
+
+    <!-- NAVIGATION BETWEEN SECTIONS -->
+    <nav id="main-menu" class="big-screen">
+        <ul>
+            <li> <i class="fa-solid fa-angle-left"></i></li>
+            <li class="menu-list-item"><a href="#contactDetails" class="menu-list-item-anchor">Contact details</a></li>
+            <li class="menu-list-item"><a href="#skills" class="menu-list-item-anchor">Skills</a></li>
+            <li class="menu-list-item"><a href="#projects" class="menu-list-item-anchor">Projects</a></li>
+            <li class="menu-list-item"><a href="#education" class="menu-list-item-anchor">Education</a></li>
+            <li> <i class="fa-solid fa-angle-right"></i></li>
+        </ul>
+    </nav>
 
     <section id="projects">
         <h1 class="title">Projects</h1>
@@ -60,9 +78,12 @@
             <li class="project">
                 <div>
                     <div>
-                        <img src="assets\images\tetris.png" alt="" class="projectImage"/>
+                        <img src="assets\images\tetris.png" alt="" class="project-image" />
+                        <div class="project-overlay">
+                            <p>Hallo</p>
+                        </div>
                     </div>
-                    <div class="projectDescription" >
+                    <div class="project-description">
                         <h1>GUIZEROChallenge</h1>
                         <p>
                             Hallo
@@ -73,9 +94,12 @@
             <li class="project">
                 <div>
                     <div>
-                        <img src="assets\images\tetris.png" alt="" class="projectImage"/>
+                        <img src="assets\images\tetris.png" alt="" class="project-image" />
+                        <div class="project-overlay">
+                            <p>Hallo</p>
+                        </div>
                     </div>
-                    <div class="projectDescription" >
+                    <div class="project-description">
                         <h1>GUIZEROChallenge</h1>
                         <p>
                             Hallo

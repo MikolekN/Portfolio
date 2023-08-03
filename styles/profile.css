@@ -7,10 +7,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#profile h1 {
-  font-size: 62px;
-  margin: 10px 0;
-}
 #profile p {
   margin: 10px 0 40px;
 }
