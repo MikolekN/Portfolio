@@ -61,15 +61,18 @@
     </div>
 
     <!-- NAVIGATION BETWEEN SECTIONS -->
-    <nav id="main-menu" class="big-screen">
-        <ul>
-            <li> <i class="fa-solid fa-angle-left"></i></li>
-            <li class="menu-list-item"><a href="#contactDetails" class="menu-list-item-anchor">Contact details</a></li>
-            <li class="menu-list-item"><a href="#skills" class="menu-list-item-anchor">Skills</a></li>
-            <li class="menu-list-item"><a href="#projects" class="menu-list-item-anchor">Projects</a></li>
-            <li class="menu-list-item"><a href="#education" class="menu-list-item-anchor">Education</a></li>
-            <li> <i class="fa-solid fa-angle-right"></i></li>
-        </ul>
+    <div id="main-menu-placeholder" class="big-screen"></div>
+    <nav id="main-menu-wrapper" class="big-screen">
+        <div id="main-menu">
+            <ul>
+                <li> <i class="fa-solid fa-angle-left"></i></li>
+                <li class="menu-list-item"><a href="#contactDetails" class="menu-list-item-anchor">Contact details</a></li>
+                <li class="menu-list-item"><a href="#skills" class="menu-list-item-anchor">Skills</a></li>
+                <li class="menu-list-item"><a href="#projects" class="menu-list-item-anchor">Projects</a></li>
+                <li class="menu-list-item"><a href="#education" class="menu-list-item-anchor">Education</a></li>
+                <li> <i class="fa-solid fa-angle-right"></i></li>
+            </ul>
+        </div>
     </nav>
 
     <section id="projects">
@@ -200,7 +203,7 @@
         I also consent to processing of my personal data for the purposes of any future recruitment processes.
     </footer>
 
-    <script type="module" src="./scripts/on_scroll.js"></script>
+    <script type="module" src="./scripts/sticky_menu.js"></script>
     <script type="module" src="./scripts/show_hide_menu.js"></script>
 </body>
 

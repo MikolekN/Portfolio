@@ -12,10 +12,10 @@ body {
 body > section {
   width: 75%;
   margin: auto;
+  padding-top: 1rem;
   text-align: center;
 }
 section > ul {
-  margin-bottom: 100vh;
   background-color: white;
   list-style-type: none;
   border-radius: 25px;  
