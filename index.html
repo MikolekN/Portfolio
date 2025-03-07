@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="./styles/skills.css">
     <link rel="stylesheet" href="./styles/education.css">
     <link rel="stylesheet" href="./styles/footer.css">
-    <link rel="stylesheet" href="./styles/contact_details.css">
     <link rel="stylesheet" href="./styles/scroll_top_button.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +32,7 @@
                 <img src="./assets/images/logo.png" onerror="this.src='./assets/images/icon.png'"
                     alt="Creators portrait image." />
             </a>
-            <div id="header-menu" class="no-big-screen small-screen">
+            <!-- <div id="header-menu">
                 <i class="fa-solid fa-play" id="close" onclick="hideMenu()"></i>
                 <ul id="header-menu-list">
                     <li><a href="#contactDetails">Contact
@@ -42,7 +41,7 @@
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#education">Education</a></li>
                 </ul>
-            </div>
+            </div> -->
             <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
     </header>
@@ -60,7 +59,6 @@
     </div>
 
     <!-- NAVIGATION BETWEEN SECTIONS -->
-    <div id="main-menu-placeholder" class="big-screen"></div>
     <nav id="main-menu-wrapper" class="big-screen">
         <div id="main-menu">
             <ul>
@@ -78,51 +76,30 @@
         <h1 class="title">Projects</h1>
         <ul class="project-list">
             <li class="project">
-                <div>
-                    <div>
-                        <img src="assets\images\tetris.png" alt="" class="project-image" />
-                        <div class="project-overlay">
-                            <p>Hallo</p>
-                        </div>
-                    </div>
-                    <div class="project-description">
-                        <h1>GUIZEROChallenge</h1>
-                        <p>
-                            Hallo
-                        </p>
-                    </div>
+                <img src="assets\images\tetris.png" alt="" class="project-image" />
+                <div class="project-description">
+                    <h1>GUIZEROChallenge</h1>
+                    <p>
+                        Hallo
+                    </p>
                 </div>
             </li>
             <li class="project">
-                <div>
-                    <div>
-                        <img src="assets\images\tetris.png" alt="" class="project-image" />
-                        <div class="project-overlay">
-                            <p>Hallo</p>
-                        </div>
-                    </div>
-                    <div class="project-description">
-                        <h1>GUIZEROChallenge</h1>
-                        <p>
-                            Hallo
-                        </p>
-                    </div>
+                <img src="assets\images\tetris.png" alt="" class="project-image" />
+                <div class="project-description">
+                    <h1>GUIZEROChallenge</h1>
+                    <p>
+                        Hallo
+                    </p>
                 </div>
             </li>
             <li class="project">
-                <div>
-                    <div>
-                        <img src="assets\images\tetris.png" alt="" class="project-image" />
-                        <div class="project-overlay">
-                            <p>Hallo</p>
-                        </div>
-                    </div>
-                    <div class="project-description">
-                        <h1>GUIZEROChallenge</h1>
-                        <p>
-                            Hallo
-                        </p>
-                    </div>
+                <img src="assets\images\tetris.png" alt="" class="project-image" />
+                <div class="project-description">
+                    <h1>GUIZEROChallenge</h1>
+                    <p>
+                        Hallo
+                    </p>
                 </div>
             </li>
         </ul>
@@ -130,32 +107,32 @@
 
     <section id="contactDetails">
         <h1 class="title">Contact details:</h1>
-        <ul>
-            <li>
+        <ul class="contact-details-list">
+            <li class="contact-details-list-item">
                 <i class="fa fa-home" aria-hidden="true"></i>
                 <h2>Gdańsk</h2>
             </li>
-            <li>
+            <li class="contact-details-list-item">
                 <i class="fa fa-mobile" aria-hidden="true"></i>
                 <h2>+48 508 658 445</h2>
             </li>
-            <li>
+            <li class="contact-details-list-item">
                 <i class="fa fa-envelope-o" aria-hidden="true"></i>
                 <h2>mikolaj.nadzieja@wp.pl</h2>
             </li>
-            <li>
+            <li class="contact-details-list-item">
                 <a href="https://linkedin.com/in/mikolaj-nadzieja/">
                     <i class="fa fa-linkedin" aria-hidden="true"></i>
                     <h2>Linkedin</h2>
                 </a>
             </li>
-            <li>
+            <li class="contact-details-list-item">
                 <a href="https://github.com/MikolekN/">
                     <i class="fa fa-github" aria-hidden="true"></i>
                     <h2>Github</h2>
                 </a>
             </li>
-            <li>
+            <li class="contact-details-list-item">
                 <a href="./index.html">
                     <i class="fa fa-globe" aria-hidden="true"></i>
                     <h2>Website</h2>
@@ -218,6 +195,7 @@
         I also consent to processing of my personal data for the purposes of any future recruitment processes.
     </footer>
 
+    <script type="module" src="./scripts/cop.js"></script>
     <script type="module" src="./scripts/sticky_menu.js"></script>
     <script type="module" src="./scripts/show_hide_menu.js"></script>
 </body>
