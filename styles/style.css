@@ -149,6 +149,56 @@ section>ul {
     }
 }
 
+#skills {
+    .skills-list {
+        background-color: transparent;
+        border-radius: 25px;
+
+        .skills-list-item {
+            background-color: #18181B;
+            list-style-type: none;
+            border-radius: 25px;
+            color: #e0e0e0;
+            padding: 1rem;
+            margin-bottom: 2rem;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .skills-list-item-title {
+                font-size: 24px;
+                line-height: 34px;
+            }
+
+            .skills-list-item-list {
+                list-style-type: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                li {
+                    width: 75%;
+                    transition: background-color 0.3s ease;
+                    border-radius: 25px;
+                    background-color: #27272A;
+                    padding: 1rem 0;
+                    margin: 1rem 0;
+                    text-align: center;
+                }
+
+                li:hover {
+                    background-color: #3F3F46;
+                }
+            }
+        }
+    }
+}
+
 #experience {
     .experience-details-list {
         border-radius: 25px;
