@@ -80,7 +80,6 @@ section>ul {
             }
 
             .project-description {
-                font-size: 24px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -95,16 +94,17 @@ section>ul {
                     max-height: 0;
                     opacity: 0;
                     overflow: hidden;
-                    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+                    transition: max-height 0.9s ease-out, opacity 0.3s ease-out;
                     text-align: center;
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    font-size: 16px;
                 }
             }
 
             &:hover .project-description p {
-                max-height: 200px;
+                max-height: 1000px;
                 opacity: 1;
             }
         }

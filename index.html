@@ -44,47 +44,47 @@
             I enjoy tackling complex projects that challenge my skills and provide opportunities to apply and expand my
             knowledge.<br />
             <br />
-            Currently, I am looking for paid internships or full-time positions.
+            Currently, I am looking for paid internships or full-time junior positions.
         </p>
-        <a href="#projects">Get to know me</a>
+        <a href="" onclick="scrollToProjects();">Get to know me</a>
     </div>
 
     <section id="projects">
         <h1 class="title">Projects</h1>
         <ul class="project-list">
             <li class="project">
-                <img src="assets\images\tetris.png" alt="" class="project-image" />
+                <img src="assets\images\mas.png" alt="" class="project-image" />
                 <div class="project-description">
-                    <h1>User Bahviour Driven Interface</h1>
+                    <h1>User Behviour Driven Interface</h1>
                     <p>
-                        Hallo
+                        Master's degree project developed by a two-person team, focused on implementing a functional model of a banking application that continuously learns individual user workflows and dynamically adapts its UI to suggest the next likely action.<br /> We built a responsive front end in TypeScript and React, leveraging a component-based architecture to render and update interface elements in real time as user behavior patterns evolve.<br /> User interactions — including clicks, hovers, and page transitions — are captured via JavaScript event listeners (e.g., click, mouseover) and streamed to the backend for logging.<br /> On the server side, a Flask application in Python gathers user interactions, persists them, analyzes them using process mining techniques from the PM4Py library, and exposes RESTful endpoints for analytics.<br /> We use PM4Py to extract XES-formatted event logs from a MongoDB datastore and apply process-mining algorithms to discover and conformance-check personalized user process models.<br /> A Camunda BPMN engine then consumes these models to predict the most probable next steps and to flag when users search for actions in unexpected interface locations.<br /> Finally, the entire application stack is containerized using Docker to ensure consistent deployment across development, testing, and production environments.
                     </p>
                 </div>
             </li>
             <li class="project">
-                <img src="assets\images\tetris.png" alt="" class="project-image" />
+                <img src="assets\images\inz.png" alt="" class="project-image" />
                 <div class="project-description">
                     <h1>Process Mining Chrome Extension</h1>
                     <p>
-                        Hallo
+                        Bachelor’s degree project developed in a two-person team, focused on creating a Chrome browser extension that analyzes user browsing history and transforms it into visual workflow models using process mining techniques.<br /> The front end, implemented as a Chrome extension, collects browsing history via the browser’s API, offering users filtering options (such as selecting a specific date range) before sending the refined data to the backend.<br /> The extension also allows users to view their browsing history, access usage statistics (e.g., frequency of website visits), download raw history data or event logs in XES format, and most importantly, explore a visualized process model showing how they navigate the web.<br /> The backend service, built to complement the extension, processes the received data into an event log, converts it into the XES standard format, and leverages the PM4Py library to discover and visualize the user’s process model.<br /> Generated visualizations and event logs are then made available for download or direct viewing through the extension, providing users with insightful, structured representations of their browsing behavior.
                     </p>
                 </div>
             </li>
             <li class="project">
-                <img src="assets\images\tetris.png" alt="" class="project-image" />
+                <img src="assets\images\deep.png" alt="" class="project-image" />
                 <div class="project-description">
                     <h1>Deep Learning Basics</h1>
                     <p>
-                        Hallo
+                        Project developed in a two-person team, aimed at designing and training a deep learning model capable of classifying Polish road signs based on images.<br /> We built and trained the model using the Keras API along with libraries like NumPy and Matplotlib, while managing the project codebase through GitHub.<br /> Throughout development, we leveraged Weights & Biases (wandb) for experiment tracking, model checkpointing (saving intermediate models after each epoch), and hyperparameter optimization using wandb sweeps.<br />Our experiments focused heavily on fine-tuning the model by configuring and running sweeps to explore different hyperparameter settings.<br /> The model was trained on two datasets sourced from Kaggle and validated using a manually collected test set of 687 photographs.<br /> Performance evaluation included key metrics such as accuracy, precision, recall, and F1-score, both overall and broken down per class, providing a detailed view of the model's classification capabilities.
                     </p>
                 </div>
             </li>
             <li class="project">
-                <img src="assets\images\tetris.png" alt="" class="project-image" />
+                <img src="assets\images\iui.png" alt="" class="project-image" />
                 <div class="project-description">
                     <h1>PG IUI NER API</h1>
                     <p>
-                        Hallo
+                        Project developed in a team of 5 people, aimed at building an intelligent text-processing service for Polish and English. The service implements Named Entity Recognition (NER) functionality, allowing both entity extraction (e.g., people, organizations, locations) and custom model training using user-provided datasets.<br /> Built on top of a FastAPI REST framework in Python, the service integrates deep learning models based on Transformer architectures (RoBERTa) and uses libraries like Hugging Face Transformers, PyTorch, Datasets, and APScheduler for model management and job scheduling.<br /> We implemented two base models—one for Polish and one for English—and allowed users to fine-tune models on new data through a scalable training queue, monitored and managed by cron jobs. Training details, such as current epoch and total number of epochs, are accessible via the API.<br /> Models were trained on datasets CoNLL-2003 and KPWR-NER, with training conducted using Hugging Face’s roberta-large and polish-roberta-large-v2 models.<br />
                     </p>
                 </div>
             </li>
@@ -524,8 +524,7 @@
     </footer>
 
     <script type="module" src="./scripts/copy_contact_detail.js"></script>
-    <script type="module" src="./scripts/sticky_menu.js"></script>
-    <script type="module" src="./scripts/show_hide_menu.js"></script>
+    <script type="module" src="./scripts/scroll.js"></script>
 </body>
 
 </html>
