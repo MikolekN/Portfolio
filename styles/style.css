@@ -277,6 +277,34 @@ section>ul {
             &:last-child {
                 margin-bottom: 0;
             }
+
+            table {
+                width: 100%;
+                border-collapse: separate;
+                border-spacing: 0;
+                border: 1px solid #3F3F46;
+                border-radius: 16px;
+                overflow: hidden;
+                margin: 0 auto;
+
+                thead th {
+                    background-color: #27272A;
+                    color: #FFF;
+                    padding: 1rem;
+                    font-size: 20px;
+                    text-align: center;
+                }
+
+                tbody td {
+                    padding: 1rem;
+                    background-color: #18181B;
+
+                    ul {
+                        list-style-type: none;
+                        margin: 0.5rem 0 0 1.25rem;
+                    }
+                }
+            }
         }
 
         .experience-details-list-item:hover {
