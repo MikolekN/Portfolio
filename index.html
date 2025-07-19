@@ -9,11 +9,7 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/profile.css">
-    <link rel="stylesheet" href="./styles/menu.css">
-    <link rel="stylesheet" href="./styles/skills.css">
-    <link rel="stylesheet" href="./styles/education.css">
     <link rel="stylesheet" href="./styles/footer.css">
-    <link rel="stylesheet" href="./styles/scroll_top_button.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +21,6 @@
 
 <body>
 
-    <!-- PAGE HEADER -->
     <header>
         <nav>
             <a href="index.html">
@@ -38,15 +33,12 @@
     <div id="profile">
         <h1 class="title">Mikołaj Nadzieja</h1>
         <p>
-            I am in the final semester of my master's degree in IT at Politechnika Gdańska (Gdansk University of
-            Technology),<br />
-            specializing in high-performance computing and machine learning.<br />
-            I enjoy tackling complex projects that challenge my skills and provide opportunities to apply and expand my
-            knowledge.<br />
+            I am completing my Master's degree in IT at Politechnika Gdańska (Gdansk University of Technology), with a focus on high-performance computing and machine learning, where I have developed expertise in parallel programming, distributed systems, and deep learning for computer vision.<br />
+            In addition to my specialization, I am passionate about web development and exploring algorithms and data structures. I enjoy tackling projects that allow me to apply my skills and explore innovative solutions.<br />
             <br />
             Currently, I am looking for paid internships or full-time junior positions.
         </p>
-        <a href="" onclick="scrollToProjects();">Get to know me</a>
+        <a onclick="">Get to know me</a>
     </div>
 
     <section id="projects">
@@ -93,336 +85,94 @@
 
     <section id="skills">
         <h1 class="title">Technical skills</h1>
-        <ul class="skills-list">
-            <li class="skills-list-item">
-                <h2 class="skills-list-item-title">Programming Languages & Frameworks:</h2>
-                <ul class="skills-list-item-list">
-                    <li class="skills-list-item-list-item">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th colspan="2">Python<br />· Intermediate ·</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Core Concepts</strong></td>
-                                    <td>
-                                        <ul>
-                                            <li>Object-Oriented Programming (OOP)</li>
-                                            <li>Generators</li>
-                                            <li>Decorators</li>
-                                            <li>Comprehensions</li>
-                                            <li>Exception Handling</li>
-                                            <li>Concurrency (Multithreading, Multiprocessing, GPU)</li>
-                                            <li>File I/O</li>
-                                            <li>Context Managers</li>
-                                            <li>Modules & Packages</li>
-                                            <li>Iterators</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Web Frameworks</strong></td>
-                                    <td>
-                                        <ul>
-                                            <li>Flask</li>
-                                            <li>FastAPI</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Data Science</strong></td>
-                                    <td>
-                                        <ul>
-                                            <li>NumPy</li>
-                                            <li>Pandas</li>
-                                            <li>Matplotlib</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Machine Learning</strong></td>
-                                    <td>
-                                        <ul>
-                                            <li>TensorFlow</li>
-                                            <li>PyTorch</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Process Science</strong></td>
-                                    <td>
-                                        <ul>
-                                            <li>PM4Py</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Testing</strong></td>
-                                    <td>
-                                        <ul>
-                                            <li>PyTest</li>
-                                            <li>Unittest</li>
-                                            <li>Mock</li>
-                                            <li>MagicMock</li>
-                                            <li>Selenium</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                    <li class="skills-list-item-list-item">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th colspan="2">JavaScript<br />· Intermediate ·</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Core Concepts</strong></td>
-                                    <td>
-                                        <ul>
-                                            <li>Asynchronous Programming (Promises, Async/Await)</li>
-                                            <li>Interfaces & Types</li>
-                                            <li>Prototypes & Inheritance</li>
-                                            <li>Generics</li>
-                                            <li>Static Typing</li>
-                                            <li>DOM Manipulation</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Frontend Frameworks</strong></td>
-                                    <td>
-                                        <ul>
-                                            <li>React</li>
-                                            <li>Vue.js</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Development & Tooling</strong></td>
-                                    <td>
-                                        <ul>
-                                            <li>ESLint</li>
-                                            <li>Vite</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                    <li class="skills-list-item-list-item">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th colspan="2">Java<br />· Intermediate ·</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Core Concepts</strong></td>
-                                    <td>
-                                        <ul>
-                                            <li>Object-Oriented Programming (OOP)</li>
-                                            <li>Generics</li>
-                                            <li>Streams & Lambdas</li>
-                                            <li>Functional Interfaces</li>
-                                            <li>Generics</li>
-                                            <li>Collections Framework</li>
-                                            <li>Exception Handling</li>
-                                            <li>File I/O</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Frameworks</strong></td>
-                                    <td>
-                                        <ul>
-                                            <li>Spring Boot / MVC</li>
-                                            <li>Spring Data JPA & Hibernate</li>
-                                            <li>JDBC & Liquibase</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Testing & Tools</strong></td>
-                                    <td>
-                                        <ul>
-                                            <li>JUnit</li>
-                                            <li>Mockito</li>
-                                            <li>Maven</li>
-                                            <li>Lombok</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                    <li class="skills-list-item-list-item">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th colspan="2">C#<br />· Beginner ·</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Core Concepts</strong></td>
-                                    <td>
-                                        <ul>
-                                            <li>Object-Oriented Programming (OOP)</li>
-                                            <li>Generics</li>
-                                            <li>LINQ</li>
-                                            <li>Async / Await</li>
-                                            <li>Collections & Generators</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Frameworks & Tools</strong></td>
-                                    <td>
-                                        <ul>
-                                            <li>Visual Studio</li>
-                                            <li>Unity</li>
-                                            <li>ASP.NET Core</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                    <li class="skills-list-item-list-item">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th colspan="2">C++<br />· Beginner ·</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Core Concepts</strong></td>
-                                    <td>
-                                        <ul>
-                                            <li>Object-Oriented Programming (OOP)</li>
-                                            <li>STL</li>
-                                            <li>Exception Handling</li>
-                                            <li>Smart Pointers</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><strong>Testing</strong></td>
-                                    <td>
-                                        <ul>
-                                            <li>Google Test</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                    <li class="skills-list-item-list-item">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th colspan="2">Databases</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td colspan="2">Experience with relational databases (MySQL, SQLite) and frequent use of NoSQL databases (MongoDB).</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">Familiar with database versioning and schema management using Liquibase.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                    <li class="skills-list-item-list-item">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th colspan="2">Development & Deployment</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td colspan="2">Experience with Git for version control and collaborative development.<br />
-                                        Familiar with common Git workflows—feature branching, rebases, merging, and conflict resolution—to keep a clean project history and facilitate code reviews.</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">Skilled in Docker for containerization and deployment of applications.<br />
-                                        Familiar with pushing and pulling images from registries (Docker Hub).</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                    <li class="skills-list-item-list-item">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th colspan="2">Development Tools & IDEs</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td colspan="2">IntelliJ IDEA (Ultimate & Community Edition)</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">Visual Studio</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">PyCharm (Ultimate & Community Edition)</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">Visual Studio Code</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">Postman</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">Git Applications (GitHub Desktop, Sourcetree)</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">Database GUIs (MongoDB Compass, DB Browser for SQLite)</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                    <li class="skills-list-item-list-item">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th colspan="2">Languages</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>Polish</strong></td>
-                                    <td>
-                                        <ul>
-                                            <li>Native</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><strong>English</strong></td>
-                                    <td>
-                                        <ul>
-                                            <li>C1 level</li>
-                                            <li>FCE (First Certificate in English) certified</li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </li>
-                </ul>
+        <ul class="skills-details-list">
+            <li class="skills-details-list-item">
+                <table>
+                    <thead>
+                    <tr>
+                        <th><strong>Python<br />· Proficient ·<br /></strong></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                        Developed backend services with Flask and FastAPI for RESTful APIs, integrating external APIs such as Camunda for process automation in user behavior-driven applications. Built and fine-tuned deep learning models for computer vision and NLP using TensorFlow, Keras, and PyTorch, with experiment tracking via Weights & Biases. Implemented process mining with PM4Py to analyze workflows and generate XES event logs. Conducted data science tasks, including data processing, analysis, and visualization, using NumPy, Pandas, and Matplotlib. Created concurrent and high-performance applications leveraging multithreading and multiprocessing. Ensured code reliability through automated testing with Pytest and Selenium for web application testing.
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
             </li>
+            <li class="skills-details-list-item">
+                <table>
+                    <thead>
+                    <tr>
+                        <th><strong>Java<br />· Intermediate ·<br /></strong></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                        Developed a web application for preschool team management using Spring Boot, with JPA/Hibernate for database integration and Liquibase for database versioning and schema migrations. Implemented features including user authentication, role-based access control (e.g., director, teacher, parent), attendance tracking, billing (tuition, meal costs, additional fees), calendars for schedules and events, group management, and a chat-based communicator for real-time messaging. Utilized Java Collections (e.g., List, Map, Set) for efficient data management and processing.
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+              </li>
+            <li class="skills-details-list-item">
+                <table>
+                    <thead>
+                    <tr>
+                        <th><strong>TypeScript / JavaScript<br />· Foundational ·<br /></strong></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                        Built responsive front-end applications using React and Vue, implementing dynamic user interfaces with event listeners for real-time user interaction tracking (e.g., clicks, hovers) in behavior-driven applications and Chrome extensions. Utilized TypeScript for type-safe development, enhancing code maintainability in component-based architectures. Leveraged modern JavaScript (ES6+) features, including arrow functions, destructuring, and async/await for API integrations. Managed application state with Redux for predictable data flow in complex UIs. Employed module bundlers like Webpack and Vite for optimized builds and fast development cycles.
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+              </li>
+            <li class="skills-details-list-item">
+                <table>
+                    <thead>
+                    <tr>
+                        <th><strong>Development & Deployment</strong></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                        Utilized Git for version control across multiple projects. Managed codebases on GitHub and GitLab, implementing branching strategies, pull requests, and merge conflict resolution for collaborative development. Used GitHub Desktop and SourceTree for streamlined workflows, alongside Git CLI for advanced operations like rebasing and cherry-picking. Contributed to team projects with code reviews and maintained repository integrity for consistent collaboration.<br />
+                        Leveraged Docker to containerize full application stacks for consistent deployment across development, testing, and production environments. Configured Dockerfiles and docker-compose for multi-container setups. Utilized Docker Hub for storing and sharing container images.
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+              </li>
+            <li class="skills-details-list-item">
+                <table>
+                    <thead>
+                    <tr>
+                        <th><strong>Languages</strong></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                        Polish - native
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        English - C1 level, FCE (First Certificate in English) certified
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+              </li>
         </ul>
     </section>
 
@@ -439,16 +189,16 @@
                     <tbody>
                     <tr>
                         <td>
-                        <strong>Master of Science, Computer Science</strong><br>
+                        <strong>Master of Engineering, Computer Science</strong><br>
                         Gdańsk University of Technology (Politechnika Gdańska)<br>
-                        <em>Oct 2024 – Jun 2025</em>
+                        <em>Feb 2024 – Jun 2025</em>
                         </td>
                     </tr>
                     <tr>
                         <td>
                         <strong>Bachelor of Engineering, Computer Science</strong><br>
                         Gdańsk University of Technology (Politechnika Gdańska)<br>
-                        <em>Oct 2020 – Jun 2024</em>
+                        <em>Oct 2020 – Jan 2024</em>
                         </td>
                     </tr>
                     </tbody>
@@ -467,11 +217,9 @@
                         <strong>Fullstack Software Developer, AIDMED</strong><br>
                         <em>Gdańsk, Poland • Internship: Jul 2023 – Aug 2023 | Full-time: Oct 2023 – Feb 2024</em>
                         <ul>
-                          <li>Built features end-to-end in a healthcare platform with Vue.js (TS) frontend &amp; Python (FastAPI) backend.</li>
-                          <li>Implemented dynamic schedule adjustments—patients can modify exercise times mid-program via responsive forms.</li>
-                          <li>Designed a “custom exercise” module for doctors to assign individualized/group plans with per-patient privacy controls.</li>
-                          <li>Wrote automated UI tests (Selenium) and API tests (PyTest), reducing regressions by 30%.</li>
-                          <li>Contributed Flutter mobile features, aligning shared API contracts with backend services.</li>
+                            <li>Gained hands-on experience in a large-scale project, working on both frontend (using TypeScript and Vue.js) and backend (Python) development, as well as testing and mobile app features (Flutter).</li>
+                          <li>Implemented dynamic schedule adjustments — patients can modify exercise times mid-program. This includes designing a form on the frontend that allows patients to modify exercise times and adjusting the backend logic for updating schedules.</li>
+                          <li>Designed a "personalized exercises" module for doctors to assign individualized/group plans with per-patient privacy controls.</li>
                         </ul>
                       </td>
                     </tr>
@@ -524,7 +272,6 @@
     </footer>
 
     <script type="module" src="./scripts/copy_contact_detail.js"></script>
-    <script type="module" src="./scripts/scroll.js"></script>
 </body>
 
 </html>
