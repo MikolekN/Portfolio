@@ -33,12 +33,13 @@
     <div id="profile">
         <h1 class="title">Mikołaj Nadzieja</h1>
         <p>
-            I am completing my Master's degree in IT at Politechnika Gdańska (Gdansk University of Technology), with a focus on high-performance computing and machine learning, where I have developed expertise in parallel programming, distributed systems, and deep learning for computer vision.<br />
-            In addition to my specialization, I am passionate about web development and exploring algorithms and data structures. I enjoy tackling projects that allow me to apply my skills and explore innovative solutions.<br />
-            <br />
-            Currently, I am looking for paid internships or full-time junior positions.
+            I am a Computer Science graduate from Politechnika Gdańska (Gdańsk University of Technology), where I completed my Master’s degree in November 2025 with a focus on high-performance computing and machine learning. During my studies, I gained a solid foundation in parallel programming, distributed systems, and deep learning for computer vision.<br /><br />
+            Alongside my main specialisation, I am interested in web development as well as algorithms and data structures. Beyond computer science, I enjoy learning about the natural sciences — I passed the Polish matura exam (the national high-school leaving examination) in chemistry and am currently preparing for the biology matura.<br/><br/>
+            I am motivated by learning new things, both within computer science and science in general, and I enjoy challenges that require analytical thinking and problem-solving.<br /><br />
+            Currently, I am looking for paid internships or full-time junior positions where I can continue developing my skills and gain professional experience.
         </p>
-        <a onclick="scrollToProjects()">Get to know me</a>
+        <a onclick="scrollToProjects()" class="full">Get to know me</a><br/><br/>
+        <a onclick="scrollToContactDetails()" class="outline">Contact me</a>
     </div>
 
     <section id="projects">
@@ -49,8 +50,9 @@
                 <div class="project-description">
                     <h1>User Behviour Driven Interface</h1>
                     <p>
-                        Master's degree project developed by a two-person team, focused on implementing a functional model of a banking application that continuously learns individual user workflows and dynamically adapts its UI to suggest the next likely action.<br /> We built a responsive front end in TypeScript and React, leveraging a component-based architecture to render and update interface elements in real time as user behavior patterns evolve.<br /> User interactions — including clicks, hovers, and page transitions — are captured via JavaScript event listeners (e.g., click, mouseover) and streamed to the backend for logging.<br /> On the server side, a Flask application in Python gathers user interactions, persists them, analyzes them using process mining techniques from the PM4Py library, and exposes RESTful endpoints for analytics.<br /> We use PM4Py to extract XES-formatted event logs from a MongoDB datastore and apply process-mining algorithms to discover and conformance-check personalized user process models.<br /> A Camunda BPMN engine then consumes these models to predict the most probable next steps and to flag when users search for actions in unexpected interface locations.<br /> Finally, the entire application stack is containerized using Docker to ensure consistent deployment across development, testing, and production environments.
+                        Master’s degree project, developed with a teammate, focused on creating a smart banking web application that learns from individual user behavior and adapts its interface to suggest likely next actions. I built a responsive front end in TypeScript and React, capturing user interactions (clicks, hovers, page transitions) and sending them to a Python/Flask backend for analysis. Using process mining techniques with PM4Py and a Camunda BPMN engine, the system dynamically predicts next steps and identifies unusual user actions. The full stack is containerized with Docker to ensure consistent deployment. This project allowed me to combine web development, data analysis, and process automation in a single application.
                     </p>
+                    <a href="https://github.com/MikolekN/User-Behavior-Driven-Interface">GitHub Repository</a>
                 </div>
             </li>
             <li class="project">
@@ -58,8 +60,9 @@
                 <div class="project-description">
                     <h1>Process Mining Chrome Extension</h1>
                     <p>
-                        Bachelor’s degree project developed in a two-person team, focused on creating a Chrome browser extension that analyzes user browsing history and transforms it into visual workflow models using process mining techniques.<br /> The front end, implemented as a Chrome extension, collects browsing history via the browser’s API, offering users filtering options (such as selecting a specific date range) before sending the refined data to the backend.<br /> The extension also allows users to view their browsing history, access usage statistics (e.g., frequency of website visits), download raw history data or event logs in XES format, and most importantly, explore a visualized process model showing how they navigate the web.<br /> The backend service, built to complement the extension, processes the received data into an event log, converts it into the XES standard format, and leverages the PM4Py library to discover and visualize the user’s process model.<br /> Generated visualizations and event logs are then made available for download or direct viewing through the extension, providing users with insightful, structured representations of their browsing behavior.
+                        Bachelor’s degree project developed with a teammate, is a Google Chrome browser extension that transforms users’ browsing history into visual workflow models using process mining techniques. I implemented the front end as a Chrome extension, which collects browsing data through the browser API, lets users filter history by date, view usage statistics, download raw data in XES format, and explore visualized process models of their web navigation. The Python backend processes the data into event logs, applies PM4Py to discover workflows, and generates visualizations that can be downloaded or viewed directly in the extension. This project combined browser development, data analysis, and process visualization, giving users structured insights into their browsing behavior.
                     </p>
+                    <a href="https://github.com/MikolekN/Process-Mining-Chrome-Extension">GitHub Repository</a>
                 </div>
             </li>
             <li class="project">
@@ -67,8 +70,10 @@
                 <div class="project-description">
                     <h1>Deep Learning Basics</h1>
                     <p>
-                        Project developed in a two-person team, aimed at designing and training a deep learning model capable of classifying Polish road signs based on images.<br /> We built and trained the model using the Keras API along with libraries like NumPy and Matplotlib, while managing the project codebase through GitHub.<br /> Throughout development, we leveraged Weights & Biases (wandb) for experiment tracking, model checkpointing (saving intermediate models after each epoch), and hyperparameter optimization using wandb sweeps.<br />Our experiments focused heavily on fine-tuning the model by configuring and running sweeps to explore different hyperparameter settings.<br /> The model was trained on two datasets sourced from Kaggle and validated using a manually collected test set of 687 photographs.<br /> Performance evaluation included key metrics such as accuracy, precision, recall, and F1-score, both overall and broken down per class, providing a detailed view of the model's classification capabilities.
+                        This project, developed in a two-person team, focused on designing and training a convolutional neural network (CNN) to classify Polish road signs from images. The model was implemented using Keras, with supporting libraries such as NumPy and Matplotlib, and the codebase was managed through GitHub. During development, we used Weights & Biases for experiment tracking, model checkpointing, and hyperparameter optimization via automated sweeps, allowing us to systematically explore different training configurations.<br/>
+                        The model was trained on publicly available datasets from Kaggle and validated on a manually collected test set of 687 images. Performance was evaluated using accuracy, precision, recall, and F1-score, both overall and per class, providing a detailed understanding of the model’s strengths and limitations.
                     </p>
+                    <a href="https://github.com/MikolekN/deep-learning-basics">GitHub Repository</a>
                 </div>
             </li>
             <li class="project">
@@ -76,10 +81,70 @@
                 <div class="project-description">
                     <h1>PG IUI NER API</h1>
                     <p>
-                        Project developed in a team of 5 people, aimed at building an intelligent text-processing service for Polish and English. The service implements Named Entity Recognition (NER) functionality, allowing both entity extraction (e.g., people, organizations, locations) and custom model training using user-provided datasets.<br /> Built on top of a FastAPI REST framework in Python, the service integrates deep learning models based on Transformer architectures (RoBERTa) and uses libraries like Hugging Face Transformers, PyTorch, Datasets, and APScheduler for model management and job scheduling.<br /> We implemented two base models—one for Polish and one for English—and allowed users to fine-tune models on new data through a scalable training queue, monitored and managed by cron jobs. Training details, such as current epoch and total number of epochs, are accessible via the API.<br /> Models were trained on datasets CoNLL-2003 and KPWR-NER, with training conducted using Hugging Face’s roberta-large and polish-roberta-large-v2 models.<br />
+                        This project, developed in a five-person team, focused on building an intelligent text-processing service that performs Named Entity Recognition (NER) for both Polish and English. The service exposes a REST API built with FastAPI (Python), enabling users to extract entities (such as people, organizations, and locations) and to fine-tune custom models using their own datasets.<br />
+                        The system integrates Transformer-based models (RoBERTa) via Hugging Face Transformers and PyTorch, with supporting tools such as Datasets and APScheduler for training orchestration and job scheduling. Two base models — one for Polish and one for English — were provided, with training requests handled through a scalable training queue and progress (e.g., current and total epochs) exposed through the API. Models were trained on CoNLL-2003 and KPWR-NER datasets using roberta-large and polish-roberta-large-v2.
                     </p>
+                    <a href="https://github.com/Bezimienii/PG-IUI-NER-API">GitHub Repository</a>
                 </div>
             </li>
+        </ul>
+    </section>
+
+    <section id="experience">
+        <h1 class="title">Experience</h1>
+        <ul class="experience-details-list">
+            <li class="experience-details-list-item">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Education</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                        <strong>Master of Engineering, Computer Science</strong><br />
+                        Gdańsk University of Technology (Politechnika Gdańska)<br />
+                        <em>Feb 2024 – Nov 2025</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <strong>Bachelor of Engineering, Computer Science</strong><br>
+                        Gdańsk University of Technology (Politechnika Gdańska)<br />
+                        <em>Oct 2020 – Jan 2024</em>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li class="experience-details-list-item">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Professional Experience</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <strong>Full Stack Software Developer</strong><br />
+                        AIDMED - Gdańsk, Poland<br />
+                        <em>Jul 2023 – Feb 2024</em><br /><br />
+                        Worked as a Full Stack Software Developer contributing to both frontend (Vue.js, TypeScript) and backend (Python, MongoDB) development for web and mobile applications.<br />
+                        My responsibilities and contributions included:
+                        <ul>
+                            <li>Designing and implementing a web and mobile body-mapping component that allows patients to precisely report pain locations and descriptions, with asynchronous asset loading to ensure responsive UI behavior.</li>
+                            <li>Improving the readability of medical data visualizations by implementing a backend algorithm for automatic Y-axis scaling that filters statistical outliers and smooths transitions between adjacent time ranges.</li>
+                            <li>Implementing API-side validation of medical measurement sessions, detecting duplicate and overlapping time intervals using an interval tree to ensure efficient conflict detection and improve data integrity.</li>
+                            <li>Developing backend logic to reconstruct and edit weekly training plans from generated schedules, enabling partial program modification while preserving completed history.</li>
+                            <li>Extending the system with multi-tenant program libraries, allowing doctors to create, edit, and manage their own reusable and patient-specific training programs with full CRUD support.</li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
         </ul>
     </section>
 
@@ -90,68 +155,117 @@
                 <table>
                     <thead>
                     <tr>
-                        <th><strong>Python<br />· Proficient ·<br /></strong></th>
+                        <th><strong>Programming languages</strong></th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>
-                        Developed backend services with Flask and FastAPI for RESTful APIs, integrating external APIs such as Camunda for process automation in user behavior-driven applications. Built and fine-tuned deep learning models for computer vision and NLP using TensorFlow, Keras, and PyTorch, with experiment tracking via Weights & Biases. Implemented process mining with PM4Py to analyze workflows and generate XES event logs. Conducted data science tasks, including data processing, analysis, and visualization, using NumPy, Pandas, and Matplotlib. Created concurrent and high-performance applications leveraging multithreading and multiprocessing. Ensured code reliability through automated testing with Pytest and Selenium for web application testing.
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>
+                                        Python — backend development (FastAPI, Flask), data processing and analysis, machine learning and NLP (PyTorch, Keras), process mining (PM4Py)
+                                    </li>
+                                    <li>
+                                        TypeScript / JavaScript — modern front-end development with React and Vue, type-safe component-based architectures
+                                    </li>
+                                    <li>
+                                        Java — backend development with Spring Boot, JPA/Hibernate, and relational data modeling
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
-
             </li>
+
             <li class="skills-details-list-item">
                 <table>
                     <thead>
                     <tr>
-                        <th><strong>Java<br />· Intermediate ·<br /></strong></th>
+                        <th><strong>Web & Backend Development</strong></th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>
-                        Developed a web application for preschool team management using Spring Boot, with JPA/Hibernate for database integration and Liquibase for database versioning and schema migrations. Implemented features including user authentication, role-based access control (e.g., director, teacher, parent), attendance tracking, billing (tuition, meal costs, additional fees), calendars for schedules and events, group management, and a chat-based communicator for real-time messaging. Utilized Java Collections (e.g., List, Map, Set) for efficient data management and processing.
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>
+                                        Frontend: React, Vue.js, HTML5, CSS3, Bootstrap
+                                    </li>
+                                    <li>
+                                        Backend: FastAPI, Flask, REST APIs
+                                    </li>
+                                    <li>
+                                        Databases: MongoDB
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
-              </li>
+            </li>
+
             <li class="skills-details-list-item">
                 <table>
                     <thead>
                     <tr>
-                        <th><strong>TypeScript / JavaScript<br />· Foundational ·<br /></strong></th>
+                        <th><strong>Data & Machine Learning</strong></th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>
-                        Built responsive front-end applications using React and Vue, implementing dynamic user interfaces with event listeners for real-time user interaction tracking (e.g., clicks, hovers) in behavior-driven applications and Chrome extensions. Utilized TypeScript for type-safe development, enhancing code maintainability in component-based architectures. Leveraged modern JavaScript (ES6+) features, including arrow functions, destructuring, and async/await for API integrations. Managed application state with Redux for predictable data flow in complex UIs. Employed module bundlers like Webpack and Vite for optimized builds and fast development cycles.
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>
+                                        Machine Learning / Deep Learning: PyTorch, Keras, TensorFlow
+                                    </li>
+                                    <li>
+                                        NLP: Transformer-based models (RoBERTa), Hugging Face ecosystem
+                                    </li>
+                                    <li>
+                                        Process Mining: PM4Py, XES event logs
+                                    </li>
+                                    <li>
+                                        Data Analysis & Visualization: NumPy, Pandas, Matplotlib
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
-              </li>
+            </li>
+
             <li class="skills-details-list-item">
                 <table>
                     <thead>
                     <tr>
-                        <th><strong>Development & Deployment</strong></th>
+                        <th><strong>Tools & DevOps</strong></th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>
-                        Utilized Git for version control across multiple projects. Managed codebases on GitHub and GitLab, implementing branching strategies, pull requests, and merge conflict resolution for collaborative development. Used GitHub Desktop and SourceTree for streamlined workflows, alongside Git CLI for advanced operations like rebasing and cherry-picking. Contributed to team projects with code reviews and maintained repository integrity for consistent collaboration.<br />
-                        Leveraged Docker to containerize full application stacks for consistent deployment across development, testing, and production environments. Configured Dockerfiles and docker-compose for multi-container setups. Utilized Docker Hub for storing and sharing container images.
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>
+                                        Version Control: Git (GitHub, GitLab)
+                                    </li>
+                                    <li>
+                                        Containerization: Docker, docker-compose
+                                    </li>
+                                    <li>
+                                        Testing: Pytest, basic end-to-end testing for web applications
+                                    </li>
+                                    <li>
+                                        Experiment Tracking: Weights & Biases
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
-              </li>
+            </li>
+
+
             <li class="skills-details-list-item">
                 <table>
                     <thead>
@@ -176,65 +290,12 @@
         </ul>
     </section>
 
-    <section id="experience">
-        <h1 class="title">Experience</h1>
-        <ul class="experience-details-list">
-            <li class="experience-details-list-item">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Education</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>
-                        <strong>Master of Engineering, Computer Science</strong><br>
-                        Gdańsk University of Technology (Politechnika Gdańska)<br>
-                        <em>Feb 2024 – Jun 2025</em>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                        <strong>Bachelor of Engineering, Computer Science</strong><br>
-                        Gdańsk University of Technology (Politechnika Gdańska)<br>
-                        <em>Oct 2020 – Jan 2024</em>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </li>
-            <li class="experience-details-list-item">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Professional Experience</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <strong>Fullstack Software Developer, AIDMED</strong><br>
-                        <em>Gdańsk, Poland • Internship: Jul 2023 – Aug 2023 | Full-time: Oct 2023 – Feb 2024</em>
-                        <ul>
-                            <li>Gained hands-on experience in a large-scale project, working on both frontend (using TypeScript and Vue.js) and backend (Python) development, as well as testing and mobile app features (Flutter).</li>
-                          <li>Implemented dynamic schedule adjustments — patients can modify exercise times mid-program. This includes designing a form on the frontend that allows patients to modify exercise times and adjusting the backend logic for updating schedules.</li>
-                          <li>Designed a "personalized exercises" module for doctors to assign individualized/group plans with per-patient privacy controls.</li>
-                        </ul>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </li>
-        </ul>
-    </section>
-
     <section id="contactDetails">
         <h1 class="title">Contact details</h1>
         <ul class="contact-details-list">
             <li class="contact-details-list-item">
                 <i class="fa fa-home" aria-hidden="true"></i>
-                <h2>Gdańsk</h2>
+                <h2>Gdańsk, Poland</h2>
             </li>
             <li class="contact-details-list-item">
                 <i class="fa fa-mobile" aria-hidden="true"></i>
@@ -253,7 +314,7 @@
             <li class="contact-details-list-item">
                 <a href="https://mikolekn.github.io/Portfolio/">
                     <i class="fa fa-globe" aria-hidden="true"></i>
-                    <h2>Website</h2>
+                    <h2>Portfolio</h2>
                 </a>
             </li>
             <li class="contact-details-list-item">
@@ -273,6 +334,7 @@
 
     <script type="module" src="./scripts/copy_contact_detail.js"></script>
     <script type="module" src="./scripts/scroll_to_projects.js"></script>
+    <script type="module" src="./scripts/scroll_to_contact.js"></script>
 </body>
 
 </html>

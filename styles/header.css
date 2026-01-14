@@ -7,10 +7,10 @@ header {
 }
 header nav {
   display: flex;
-  padding: 4% 4%;
+  padding-top: 10px;
   margin: auto;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
 }
 header nav a img {
   width: 150px;
@@ -20,15 +20,16 @@ header nav a img{
   border-radius: 50%;
 }
 
-@media(max-width: 700px) {
+@media(max-width: 1400px) {
   header nav {
     display: flex;
-    padding: 4% 4%;
+    padding-top: 10px;
+    padding-left: 10px;
     margin: auto;
     justify-content: space-between;
-    align-items: center;  
+    align-items: center;
   }
-  
+
   header nav a img {
     width: 100px;
     height: 100px;
