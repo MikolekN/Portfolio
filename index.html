@@ -1,340 +1,409 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mikołaj Nadzieja</title>
-    <link rel="icon" href="./assets/images/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <title>Mikołaj Nadzieja, software developer</title>
+    <meta name="description" content="Software developer in Gdańsk. Backend services and document-processing tools in Python, C#/.NET and TypeScript. Open to software developer roles from November 2026.">
+    <meta name="theme-color" content="#000000">
+    <link rel="canonical" href="https://mikolekn.github.io/Portfolio/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mikolekn.github.io/Portfolio/">
+    <meta property="og:title" content="Mikołaj Nadzieja, software developer">
+    <meta property="og:description" content="Backend services and document-processing tools in Python, C#/.NET and TypeScript. Open to software developer roles from November 2026.">
+    <meta property="og:image" content="https://mikolekn.github.io/Portfolio/assets/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Mikołaj Nadzieja, software developer, next to a short XML listing.">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="./assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
+
+    <link rel="preload" href="./assets/fonts/atkinson-hyperlegible-next-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./assets/fonts/atkinson-hyperlegible-next-latin-ext-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/header.css">
-    <link rel="stylesheet" href="./styles/profile.css">
-    <link rel="stylesheet" href="./styles/footer.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Flex:wght@300;400&display=swap"
-        rel="stylesheet">
-
-    <script src="https://kit.fontawesome.com/aa8d321bbb.js" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mikołaj Nadzieja",
+        "jobTitle": "Software Developer",
+        "url": "https://mikolekn.github.io/Portfolio/",
+        "address": { "@type": "PostalAddress", "addressLocality": "Gdańsk", "addressCountry": "PL" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Gdańsk University of Technology" },
+        "sameAs": ["https://www.linkedin.com/in/mikolaj-nadzieja/", "https://github.com/MikolekN"]
+    }
+    </script>
+</head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <header>
-        <nav>
-            <a href="index.html">
-                <img src="./assets/images/logo.png" onerror="this.src='./assets/images/icon.png'"
-                    alt="Creators portrait image." />
+    <header class="site-header">
+        <div class="frame site-header__inner">
+            <a class="brand" href="#top" aria-label="Mikołaj Nadzieja, back to top">
+                <img src="./assets/images/logo-wide-120.png" width="100" height="40" alt="">
             </a>
-        </nav>
+            <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+            <nav class="site-nav" id="site-nav" aria-label="Sections">
+                <ul>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div id="profile">
-        <h1 class="title">Mikołaj Nadzieja</h1>
-        <p>
-            I am a Computer Science graduate from Politechnika Gdańska (Gdańsk University of Technology), where I completed my Master’s degree in November 2025 with a focus on high-performance computing and machine learning. During my studies, I gained a solid foundation in parallel programming, distributed systems, and deep learning for computer vision.<br /><br />
-            Alongside my main specialisation, I am interested in web development as well as algorithms and data structures. Beyond computer science, I enjoy learning about the natural sciences — I passed the Polish matura exam (the national high-school leaving examination) in chemistry and am currently preparing for the biology matura.<br/><br/>
-            I am motivated by learning new things, both within computer science and science in general, and I enjoy challenges that require analytical thinking and problem-solving.<br /><br />
-            Currently, I am looking for paid internships or full-time junior positions where I can continue developing my skills and gain professional experience.
-        </p>
-        <a onclick="scrollToProjects()" class="full">Get to know me</a><br/><br/>
-        <a onclick="scrollToContactDetails()" class="outline">Contact me</a>
-    </div>
-
-    <section id="projects">
-        <h1 class="title">Projects</h1>
-        <ul class="project-list">
-            <li class="project">
-                <img src="assets\images\mas.png" alt="" class="project-image" />
-                <div class="project-description">
-                    <h1>User Behviour Driven Interface</h1>
-                    <p>
-                        Master’s degree project, developed with a teammate, focused on creating a smart banking web application that learns from individual user behavior and adapts its interface to suggest likely next actions. I built a responsive front end in TypeScript and React, capturing user interactions (clicks, hovers, page transitions) and sending them to a Python/Flask backend for analysis. Using process mining techniques with PM4Py and a Camunda BPMN engine, the system dynamically predicts next steps and identifies unusual user actions. The full stack is containerized with Docker to ensure consistent deployment. This project allowed me to combine web development, data analysis, and process automation in a single application.
+    <main id="main">
+        <section class="hero frame" id="top" aria-labelledby="hero-title">
+            <h1 id="hero-title">Mikołaj Nadzieja</h1>
+            <div class="hero__grid">
+                <p class="lede">I build backend services and tools that turn documents into structured data.</p>
+                <div class="hero__aside">
+                    <p class="hero__facts">Software developer working in Python, C#/.NET and TypeScript, with an MSc in Computer Science from Gdańsk Tech and about 16 months of professional experience.</p>
+                    <p class="hero__status"><span class="status-dot" aria-hidden="true"></span>Open to software developer roles from November 2026, in Gdańsk, Gdynia or Sopot, or remote.</p>
+                    <p class="hero__actions">
+                        <a class="button" href="#experience">See my work</a>
+                        <a class="text-link" href="mailto:mikolaj.nadzieja@wp.pl">Email me</a>
+                        <a class="text-link" href="https://www.linkedin.com/in/mikolaj-nadzieja/">LinkedIn</a>
+                        <a class="text-link" href="https://github.com/MikolekN">GitHub</a>
                     </p>
-                    <a href="https://github.com/MikolekN/User-Behavior-Driven-Interface">GitHub Repository</a>
                 </div>
-            </li>
-            <li class="project">
-                <img src="assets\images\inz.png" alt="" class="project-image" />
-                <div class="project-description">
-                    <h1>Process Mining Chrome Extension</h1>
-                    <p>
-                        Bachelor’s degree project developed with a teammate, is a Google Chrome browser extension that transforms users’ browsing history into visual workflow models using process mining techniques. I implemented the front end as a Chrome extension, which collects browsing data through the browser API, lets users filter history by date, view usage statistics, download raw data in XES format, and explore visualized process models of their web navigation. The Python backend processes the data into event logs, applies PM4Py to discover workflows, and generates visualizations that can be downloaded or viewed directly in the extension. This project combined browser development, data analysis, and process visualization, giving users structured insights into their browsing behavior.
-                    </p>
-                    <a href="https://github.com/MikolekN/Process-Mining-Chrome-Extension">GitHub Repository</a>
+            </div>
+
+            <figure class="demo" data-demo>
+                <div class="pane pane--doc">
+                    <p class="pane__title"><span>ustawa.docx</span><span class="pane__hint"><span class="hint--pointer">Point at a provision</span><span class="hint--touch">Tap a provision</span></span></p>
+                    <div class="doc" lang="pl" role="group" aria-label="Statute provisions">
+                        <p class="doc__unit"><span class="prov prov--art" data-eid="art_1" data-in="art_1">Art. 1.</span> <span class="prov is-on" data-eid="art_1__para_1" data-in="art_1 art_1__para_1">1. Ustawa określa zasady prowadzenia rejestru aktów prawnych.</span></p>
+                        <p class="doc__unit doc__unit--para"><span class="prov" data-eid="art_1__para_2" data-in="art_1 art_1__para_2">2. Rejestr prowadzi się w postaci elektronicznej.</span></p>
+                        <p class="doc__unit"><span class="prov prov--art" data-eid="art_2" data-in="art_2">Art. 2.</span> <span class="prov" data-eid="art_2__list_1__intro" data-in="art_2 art_2__list_1 art_2__list_1__intro">Ilekroć w ustawie jest mowa o:</span></p>
+                        <p class="doc__unit doc__unit--point"><span class="prov" data-eid="art_2__list_1__point_1" data-in="art_2 art_2__list_1 art_2__list_1__point_1">1) akcie – rozumie się przez to akt normatywny ogłoszony w dzienniku urzędowym;</span></p>
+                        <p class="doc__unit doc__unit--point"><span class="prov" data-eid="art_2__list_1__point_2" data-in="art_2 art_2__list_1 art_2__list_1__point_2">2) rejestrze – rozumie się przez to rejestr, o którym mowa w art. 1 ust. 1.</span></p>
+                    </div>
                 </div>
-            </li>
-            <li class="project">
-                <img src="assets\images\deep.png" alt="" class="project-image" />
-                <div class="project-description">
-                    <h1>Deep Learning Basics</h1>
-                    <p>
-                        This project, developed in a two-person team, focused on designing and training a convolutional neural network (CNN) to classify Polish road signs from images. The model was implemented using Keras, with supporting libraries such as NumPy and Matplotlib, and the codebase was managed through GitHub. During development, we used Weights & Biases for experiment tracking, model checkpointing, and hyperparameter optimization via automated sweeps, allowing us to systematically explore different training configurations.<br/>
-                        The model was trained on publicly available datasets from Kaggle and validated on a manually collected test set of 687 images. Performance was evaluated using accuracy, precision, recall, and F1-score, both overall and per class, providing a detailed understanding of the model’s strengths and limitations.
-                    </p>
-                    <a href="https://github.com/MikolekN/deep-learning-basics">GitHub Repository</a>
+
+                <section class="pane pane--xml" aria-label="The same statute as XML">
+                    <p class="pane__title"><span>ustawa.xml</span></p>
+<pre class="xml" tabindex="0"><code><span class="ln" style="--i:0" data-in="art_1"><span class="t">&lt;article</span> <span class="a">eId=</span><span class="v">"art_1"</span><span class="t">&gt;</span></span>
+<span class="ln" style="--i:1" data-in="art_1">  <span class="t">&lt;num&gt;</span>Art. 1.<span class="t">&lt;/num&gt;</span></span>
+<span class="ln is-on" style="--i:2" data-in="art_1 art_1__para_1">  <span class="t">&lt;paragraph</span> <span class="a">eId=</span><span class="v">"art_1__para_1"</span><span class="t">&gt;</span></span>
+<span class="ln is-on" style="--i:3" data-in="art_1 art_1__para_1">    <span class="t">&lt;num&gt;</span>1.<span class="t">&lt;/num&gt;</span></span>
+<span class="ln is-on" style="--i:4" data-in="art_1 art_1__para_1">    <span class="t">&lt;content&gt;</span>Ustawa określa zasady…<span class="t">&lt;/content&gt;</span></span>
+<span class="ln is-on" style="--i:5" data-in="art_1 art_1__para_1">  <span class="t">&lt;/paragraph&gt;</span></span>
+<span class="ln" style="--i:6" data-in="art_1 art_1__para_2">  <span class="t">&lt;paragraph</span> <span class="a">eId=</span><span class="v">"art_1__para_2"</span><span class="t">&gt;</span></span>
+<span class="ln" style="--i:7" data-in="art_1 art_1__para_2">    <span class="t">&lt;num&gt;</span>2.<span class="t">&lt;/num&gt;</span></span>
+<span class="ln" style="--i:8" data-in="art_1 art_1__para_2">    <span class="t">&lt;content&gt;</span>Rejestr prowadzi się…<span class="t">&lt;/content&gt;</span></span>
+<span class="ln" style="--i:9" data-in="art_1 art_1__para_2">  <span class="t">&lt;/paragraph&gt;</span></span>
+<span class="ln" style="--i:10" data-in="art_1"><span class="t">&lt;/article&gt;</span></span>
+<span class="ln" style="--i:11" data-in="art_2"><span class="t">&lt;article</span> <span class="a">eId=</span><span class="v">"art_2"</span><span class="t">&gt;</span></span>
+<span class="ln" style="--i:12" data-in="art_2">  <span class="t">&lt;num&gt;</span>Art. 2.<span class="t">&lt;/num&gt;</span></span>
+<span class="ln" style="--i:13" data-in="art_2 art_2__list_1">  <span class="t">&lt;list</span> <span class="a">eId=</span><span class="v">"art_2__list_1"</span><span class="t">&gt;</span></span>
+<span class="ln" style="--i:14" data-in="art_2 art_2__list_1 art_2__list_1__intro">    <span class="t">&lt;intro&gt;</span>Ilekroć w ustawie jest mowa o:<span class="t">&lt;/intro&gt;</span></span>
+<span class="ln" style="--i:15" data-in="art_2 art_2__list_1 art_2__list_1__point_1">    <span class="t">&lt;point</span> <span class="a">eId=</span><span class="v">"art_2__list_1__point_1"</span><span class="t">&gt;</span></span>
+<span class="ln" style="--i:16" data-in="art_2 art_2__list_1 art_2__list_1__point_1">      <span class="t">&lt;num&gt;</span>1)<span class="t">&lt;/num&gt;</span></span>
+<span class="ln" style="--i:17" data-in="art_2 art_2__list_1 art_2__list_1__point_1">      <span class="t">&lt;content&gt;</span>akcie – rozumie się…<span class="t">&lt;/content&gt;</span></span>
+<span class="ln" style="--i:18" data-in="art_2 art_2__list_1 art_2__list_1__point_1">    <span class="t">&lt;/point&gt;</span></span>
+<span class="ln" style="--i:19" data-in="art_2 art_2__list_1 art_2__list_1__point_2">    <span class="t">&lt;point</span> <span class="a">eId=</span><span class="v">"art_2__list_1__point_2"</span><span class="t">&gt;</span></span>
+<span class="ln" style="--i:20" data-in="art_2 art_2__list_1 art_2__list_1__point_2">      <span class="t">&lt;num&gt;</span>2)<span class="t">&lt;/num&gt;</span></span>
+<span class="ln" style="--i:21" data-in="art_2 art_2__list_1 art_2__list_1__point_2">      <span class="t">&lt;content&gt;</span>rejestrze – …, o którym mowa w</span>
+<span class="ln" style="--i:22" data-in="art_2 art_2__list_1 art_2__list_1__point_2">        <span class="t">&lt;ref</span> <span class="a">href=</span><span class="v">"#art_1__para_1"</span><span class="t">&gt;</span>art. 1 ust. 1<span class="t">&lt;/ref&gt;</span>.</span>
+<span class="ln" style="--i:23" data-in="art_2 art_2__list_1 art_2__list_1__point_2">      <span class="t">&lt;/content&gt;</span></span>
+<span class="ln" style="--i:24" data-in="art_2 art_2__list_1 art_2__list_1__point_2">    <span class="t">&lt;/point&gt;</span></span>
+<span class="ln" style="--i:25" data-in="art_2 art_2__list_1">  <span class="t">&lt;/list&gt;</span></span>
+<span class="ln" style="--i:26" data-in="art_2"><span class="t">&lt;/article&gt;</span></span></code></pre>
+                </section>
+
+                <figcaption class="demo__caption">The idea behind my CAISE work, in miniature: each provision of a statute becomes an XML element with its own identifier. The statute is made up, and the XML is simplified Akoma Ntoso, a public standard, not output from the project.</figcaption>
+            </figure>
+        </section>
+
+        <section class="section frame" id="experience" aria-labelledby="experience-title">
+            <h2 id="experience-title">Experience</h2>
+
+            <article class="entry">
+                <p class="entry__dates">Mar 2026 – present</p>
+                <div class="entry__body">
+                    <h3>Software Developer</h3>
+                    <p class="entry__org">Gdańsk University of Technology, CAISE project</p>
+                    <p>Legal-tech team in CAISE, an EU-funded cloud AI platform project, building an XML standard and tools for Polish legal acts with the Government Legislation Centre (RCL). The Chancellery of the Sejm is testing the solution.</p>
+                    <ul>
+                        <li>Turned RCL’s command-line prototype into a service that converts legal acts from Word to XML: built the XML export, REST API and batch tool, extended the parsing, and wrote over 400 of its ~820 tests and its CI/CD pipeline.</li>
+                        <li>As sole developer, built a Python service that renders that XML as HTML, as a PDF in the official Journal of Laws layout and as an accessible PDF.</li>
+                        <li>Recruited and supervised four student interns while they refactored about 20 of the team’s services for open-source publication, and wrote the team’s standards for code quality, tests, CI/CD and documentation.</li>
+                        <li>Wrote reference XML encodings of real legal acts, checked the schema and generated XML for errors, and gave a short talk on the standard at the conference “<span lang="pl">Legislacja przyszłości: nauka i administracja w dobie NewTech</span>”.</li>
+                    </ul>
+                    <p class="built-with">Built with C#, .NET 10, ASP.NET Core, xUnit, Python, FastAPI, Typst, XML Schema, Docker and GitLab CI/CD.</p>
                 </div>
-            </li>
-            <li class="project">
-                <img src="assets\images\iui.png" alt="" class="project-image" />
-                <div class="project-description">
-                    <h1>PG IUI NER API</h1>
-                    <p>
-                        This project, developed in a five-person team, focused on building an intelligent text-processing service that performs Named Entity Recognition (NER) for both Polish and English. The service exposes a REST API built with FastAPI (Python), enabling users to extract entities (such as people, organizations, and locations) and to fine-tune custom models using their own datasets.<br />
-                        The system integrates Transformer-based models (RoBERTa) via Hugging Face Transformers and PyTorch, with supporting tools such as Datasets and APScheduler for training orchestration and job scheduling. Two base models — one for Polish and one for English — were provided, with training requests handled through a scalable training queue and progress (e.g., current and total epochs) exposed through the API. Models were trained on CoNLL-2003 and KPWR-NER datasets using roberta-large and polish-roberta-large-v2.
-                    </p>
-                    <a href="https://github.com/Bezimienii/PG-IUI-NER-API">GitHub Repository</a>
+            </article>
+
+            <article class="entry">
+                <p class="entry__dates">Jul 2023 – Feb 2024</p>
+                <div class="entry__body">
+                    <h3>Junior Software Engineer</h3>
+                    <p class="entry__org">Aidmed, Gdańsk</p>
+                    <p>A medtech startup with a CE-marked Class IIa remote-monitoring system, where I worked on PulmoRehab, a telerehabilitation platform for COPD patients. I joined as an intern in July 2023 and went full-time in September.</p>
+                    <ul>
+                        <li>Built the “Where does it hurt” body-map component from scratch for web (Vue.js) and mobile (Flutter): patients mark and describe pain on a body diagram, and doctors review the history.</li>
+                        <li>Validated measurement sessions sent by medical devices in the API, rejecting duplicate and overlapping time ranges with an interval tree.</li>
+                        <li>Built the training-plan logic: rebuilding a patient’s weekly plan from its schedule, editing it without losing completed sessions, and building per-doctor programme libraries.</li>
+                        <li>Added backend Y-axis auto-scaling that keeps physiological charts readable, and a socio-demographic survey with dependent fields and a live qualification score.</li>
+                    </ul>
+                    <p class="built-with">Built with TypeScript, Vue.js, NestJS, Node.js, MongoDB and Flutter.</p>
                 </div>
-            </li>
-        </ul>
-    </section>
+            </article>
+        </section>
 
-    <section id="experience">
-        <h1 class="title">Experience</h1>
-        <ul class="experience-details-list">
-            <li class="experience-details-list-item">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Education</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>
-                        <strong>Master of Engineering, Computer Science</strong><br />
-                        Gdańsk University of Technology (Politechnika Gdańska)<br />
-                        <em>Feb 2024 – Nov 2025</em>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                        <strong>Bachelor of Engineering, Computer Science</strong><br>
-                        Gdańsk University of Technology (Politechnika Gdańska)<br />
-                        <em>Oct 2020 – Jan 2024</em>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </li>
-            <li class="experience-details-list-item">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Professional Experience</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <strong>Full Stack Software Developer</strong><br />
-                        AIDMED - Gdańsk, Poland<br />
-                        <em>Jul 2023 – Feb 2024</em><br /><br />
-                        Worked as a Full Stack Software Developer contributing to both frontend (Vue.js, TypeScript) and backend (Python, MongoDB) development for web and mobile applications.<br />
-                        My responsibilities and contributions included:
-                        <ul>
-                            <li>Designing and implementing a web and mobile body-mapping component that allows patients to precisely report pain locations and descriptions, with asynchronous asset loading to ensure responsive UI behavior.</li>
-                            <li>Improving the readability of medical data visualizations by implementing a backend algorithm for automatic Y-axis scaling that filters statistical outliers and smooths transitions between adjacent time ranges.</li>
-                            <li>Implementing API-side validation of medical measurement sessions, detecting duplicate and overlapping time intervals using an interval tree to ensure efficient conflict detection and improve data integrity.</li>
-                            <li>Developing backend logic to reconstruct and edit weekly training plans from generated schedules, enabling partial program modification while preserving completed history.</li>
-                            <li>Extending the system with multi-tenant program libraries, allowing doctors to create, edit, and manage their own reusable and patient-specific training programs with full CRUD support.</li>
-                        </ul>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </li>
-        </ul>
-    </section>
+        <section class="section frame" id="projects" aria-labelledby="projects-title">
+            <h2 id="projects-title">Projects</h2>
 
-    <section id="skills">
-        <h1 class="title">Technical skills</h1>
-        <ul class="skills-details-list">
-            <li class="skills-details-list-item">
-                <table>
-                    <thead>
-                    <tr>
-                        <th><strong>Programming languages</strong></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <ul>
-                                    <li>
-                                        Python — backend development (FastAPI, Flask), data processing and analysis, machine learning and NLP (PyTorch, Keras), process mining (PM4Py)
-                                    </li>
-                                    <li>
-                                        TypeScript / JavaScript — modern front-end development with React and Vue, type-safe component-based architectures
-                                    </li>
-                                    <li>
-                                        Java — backend development with Spring Boot, JPA/Hibernate, and relational data modeling
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </li>
+            <h3 class="group-title">At CAISE</h3>
 
-            <li class="skills-details-list-item">
-                <table>
-                    <thead>
-                    <tr>
-                        <th><strong>Web & Backend Development</strong></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <ul>
-                                    <li>
-                                        Frontend: React, Vue.js, HTML5, CSS3, Bootstrap
-                                    </li>
-                                    <li>
-                                        Backend: FastAPI, Flask, REST APIs
-                                    </li>
-                                    <li>
-                                        Databases: MongoDB
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </li>
+            <article class="project">
+                <div class="project__visual">
+                    <svg class="diagram" viewBox="0 0 360 225" role="img" aria-labelledby="dia-conv-title">
+                        <title id="dia-conv-title">A Word file goes through the converter and comes out as XML with nested elements.</title>
+                        <g class="d-page">
+                            <rect x="10" y="38" width="88" height="118" rx="4"/>
+                            <path d="M24 62h52M24 76h60M24 90h44M24 108h56M24 122h36M24 136h54"/>
+                        </g>
+                        <text class="d-label" x="54" y="184" text-anchor="middle">ustawa.docx</text>
+                        <path class="d-arrow" d="M106 97h26"/>
+                        <path class="d-arrowhead" d="M127 91l7 6-7 6"/>
+                        <g class="d-tree">
+                            <circle cx="160" cy="58" r="6"/>
+                            <circle cx="146" cy="97" r="6"/>
+                            <circle cx="175" cy="97" r="6"/>
+                            <circle cx="175" cy="136" r="6"/>
+                            <path d="M157 63l-8 28M163 63l9 28M175 103v27"/>
+                        </g>
+                        <path class="d-arrow" d="M192 97h26"/>
+                        <path class="d-arrowhead" d="M213 91l7 6-7 6"/>
+                        <g class="d-xml">
+                            <rect x="228" y="38" width="122" height="118" rx="4"/>
+                            <text x="238" y="66">&lt;article&gt;</text>
+                            <text x="248" y="88">&lt;paragraph&gt;</text>
+                            <text x="248" y="110">&lt;paragraph&gt;</text>
+                            <text x="238" y="132">&lt;article&gt;</text>
+                        </g>
+                        <text class="d-label" x="289" y="184" text-anchor="middle">ustawa.xml</text>
+                    </svg>
+                </div>
+                <div class="project__body">
+                    <h4>Legal-act converter: Word to XML</h4>
+                    <p class="project__meta">CAISE, Gdańsk University of Technology, 2026</p>
+                    <p>Converts Polish legal acts from Word files into XML in the project’s schema, giving every article, paragraph and point its own identifier and dates. It grew from a command-line prototype written at the Government Legislation Centre.</p>
+                    <p class="project__part">My part:</p>
+                    <ul>
+                        <li>the XML export, kept in step with each version of the schema</li>
+                        <li>parsing of amendments and quotations, sentences, entry-into-force and retroactive dates, and document headers, tracked on 192 statutes supplied by RCL</li>
+                        <li>the REST API, health checks and a batch command-line tool</li>
+                        <li>over 400 of its ~820 xUnit tests, and a GitLab CI/CD pipeline with coverage gates (70% overall, 80% on changed lines)</li>
+                        <li>Docker images, deployed online for the partners to test</li>
+                    </ul>
+                    <p class="built-with">Built with C#, .NET 10, ASP.NET Core, OpenXML SDK, xUnit, Docker and GitLab CI/CD. The code is internal to the project.</p>
+                </div>
+            </article>
 
-            <li class="skills-details-list-item">
-                <table>
-                    <thead>
-                    <tr>
-                        <th><strong>Data & Machine Learning</strong></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <ul>
-                                    <li>
-                                        Machine Learning / Deep Learning: PyTorch, Keras, TensorFlow
-                                    </li>
-                                    <li>
-                                        NLP: Transformer-based models (RoBERTa), Hugging Face ecosystem
-                                    </li>
-                                    <li>
-                                        Process Mining: PM4Py, XES event logs
-                                    </li>
-                                    <li>
-                                        Data Analysis & Visualization: NumPy, Pandas, Matplotlib
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </li>
+            <article class="project">
+                <div class="project__visual">
+                    <svg class="diagram" viewBox="0 0 360 225" role="img" aria-labelledby="dia-vis-title">
+                        <title id="dia-vis-title">One XML file is rendered as an HTML page, a PDF in the Journal of Laws layout and an accessible PDF.</title>
+                        <g class="d-xml">
+                            <rect x="10" y="58" width="104" height="104" rx="4"/>
+                            <text x="20" y="88">&lt;article&gt;</text>
+                            <text x="28" y="110">&lt;paragraph&gt;</text>
+                            <text x="28" y="132">&lt;paragraph&gt;</text>
+                        </g>
+                        <text class="d-label" x="62" y="188" text-anchor="middle">ustawa.xml</text>
+                        <path class="d-arrow" d="M122 110c36 0 42-66 74-66M122 110h74M122 110c36 0 42 66 74 66"/>
+                        <g class="d-page">
+                            <rect x="204" y="20" width="146" height="48" rx="4"/>
+                            <path d="M204 32h146"/>
+                            <path d="M216 46h56M216 56h78"/>
+                        </g>
+                        <text class="d-label" x="340" y="56" text-anchor="end">HTML</text>
+                        <g class="d-page">
+                            <rect x="204" y="86" width="146" height="48" rx="4"/>
+                            <path class="d-thick" d="M216 99h46"/>
+                            <path d="M216 112h78M216 122h62"/>
+                        </g>
+                        <text class="d-label" x="340" y="122" text-anchor="end">PDF</text>
+                        <g class="d-page">
+                            <rect x="204" y="152" width="146" height="48" rx="4"/>
+                            <path class="d-thick" d="M216 168h72M216 183h50"/>
+                        </g>
+                        <text class="d-label" x="340" y="188" text-anchor="end">PDF/UA</text>
+                    </svg>
+                </div>
+                <div class="project__body">
+                    <h4>Legal-act visualiser: XML to HTML and PDF</h4>
+                    <p class="project__meta">CAISE, Gdańsk University of Technology, 2026. Sole developer.</p>
+                    <p>Renders one XML file three ways: a self-contained HTML page, a PDF in the official Journal of Laws layout, and an accessible tagged PDF (PDF/UA-1) with large print, bookmarks and alternative text for formulas. The team uses it to check conversions, and it has been shared with legislators for testing.</p>
+                    <p class="project__part">My part: all of it, from the Typst templates and the MathML-to-Typst conversion to XSD validation, the web form and command-line tool, the CI pipeline and the Docker image.</p>
+                    <p class="built-with">Built with Python, FastAPI, lxml, Jinja2, Typst, Docker and GitLab CI. The code is internal to the project.</p>
+                </div>
+            </article>
 
-            <li class="skills-details-list-item">
-                <table>
-                    <thead>
-                    <tr>
-                        <th><strong>Tools & DevOps</strong></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <ul>
-                                    <li>
-                                        Version Control: Git (GitHub, GitLab)
-                                    </li>
-                                    <li>
-                                        Containerization: Docker, docker-compose
-                                    </li>
-                                    <li>
-                                        Testing: Pytest, basic end-to-end testing for web applications
-                                    </li>
-                                    <li>
-                                        Experiment Tracking: Weights & Biases
-                                    </li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </li>
+            <h3 class="group-title">Theses</h3>
 
+            <article class="project">
+                <div class="project__visual">
+                    <img src="./assets/images/project-adaptive-ui.webp" width="1200" height="750" loading="lazy" decoding="async" alt="The simulated banking app: a menu bar with Transfers, Finances and My products, and an account card with a balance and a Transfer button.">
+                </div>
+                <div class="project__body">
+                    <h4>Banking app that adapts to each user</h4>
+                    <p class="project__meta">Master’s thesis with Dawid Łydka, graded 5.0</p>
+                    <p>A simulated banking web app that learns how each user behaves and adapts its interface, from quick shortcuts and menu priorities to a predicted next step.</p>
+                    <p class="project__part">My part: the Flask backend and MongoDB data model; the event-processing service behind all five adaptive features; a pipeline that mines each user’s event log with PM4Py and deploys it as an executable Camunda 8 process; and about half of the React frontend. Together we designed and ran a usability study with 13 participants, and all 13 chose the personalised version for daily use.</p>
+                    <p class="paper">Paper: <cite>Process mining-driven model for adaptive user interfaces</cite> by M. Nadzieja, D. Łydka and M. Godlewska, under review at TASK Quarterly.</p>
+                    <p class="built-with">Built with Python, Flask, MongoDB, PM4Py, Camunda 8, React and TypeScript.</p>
+                    <p><a class="text-link" href="https://github.com/MikolekN/User-Behavior-Driven-Interface">Code on GitHub</a></p>
+                </div>
+            </article>
 
-            <li class="skills-details-list-item">
-                <table>
-                    <thead>
-                    <tr>
-                        <th><strong>Languages</strong></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>
-                        Polish - native
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                        English - C1 level, FCE (First Certificate in English) certified
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-              </li>
-        </ul>
-    </section>
+            <article class="project">
+                <div class="project__visual">
+                    <img src="./assets/images/project-chrome-extension.webp" width="1189" height="796" loading="lazy" decoding="async" alt="Process model drawn from browsing history: pages as boxes, visits between them as numbered arrows.">
+                </div>
+                <div class="project__body">
+                    <h4>Chrome extension that maps your browsing</h4>
+                    <p class="project__meta">Bachelor’s thesis with Dawid Łydka, graded 5.0</p>
+                    <p>Turns your browsing history into process models. You can filter it by date, see usage statistics, export the event log as XES and explore the workflow discovered from it.</p>
+                    <p class="project__part">My part: the Python/Flask backend and storage; building the event log with two algorithms, a full rebuild and an incremental update; process discovery with PM4Py; automated tests; and about half of the extension’s frontend.</p>
+                    <p class="built-with">Built with Python, Flask, pandas, PM4Py, JavaScript and Bootstrap.</p>
+                    <p><a class="text-link" href="https://github.com/MikolekN/Process-Mining-Chrome-Extension">Code on GitHub</a></p>
+                </div>
+            </article>
 
-    <section id="contactDetails">
-        <h1 class="title">Contact details</h1>
-        <ul class="contact-details-list">
-            <li class="contact-details-list-item">
-                <i class="fa fa-home" aria-hidden="true"></i>
-                <h2>Gdańsk, Poland</h2>
-            </li>
-            <li class="contact-details-list-item">
-                <i class="fa fa-mobile" aria-hidden="true"></i>
-                <h2>+48 508 658 445</h2>
-            </li>
-            <li class="contact-details-list-item">
-                <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                <h2>mikolaj.nadzieja@wp.pl</h2>
-            </li>
-            <li class="contact-details-list-item">
-                <a href="https://github.com/MikolekN/">
-                    <i class="fa fa-github" aria-hidden="true"></i>
-                    <h2>Github</h2>
-                </a>
-            </li>
-            <li class="contact-details-list-item">
-                <a href="https://mikolekn.github.io/Portfolio/">
-                    <i class="fa fa-globe" aria-hidden="true"></i>
-                    <h2>Portfolio</h2>
-                </a>
-            </li>
-            <li class="contact-details-list-item">
-                <a href="https://linkedin.com/in/mikolaj-nadzieja/">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                    <h2>Linkedin</h2>
-                </a>
-            </li>
-        </ul>
-    </section>
+            <h3 class="group-title">Course and team projects</h3>
 
-    <footer>
-        I hereby give consent for my personal data included in this page to be processed for the purposes of any
-        recruitment processes. <br />
-        I also consent to processing of my personal data for the purposes of any future recruitment processes.
+            <div class="minor-list">
+                <article class="minor">
+                    <h4>Named-entity recognition API</h4>
+                    <p class="project__meta">Team of five</p>
+                    <p>A REST service that finds people, organisations and places in Polish and English text, and fine-tunes its RoBERTa models on your own data through a training queue.</p>
+                    <p class="built-with">Built with Python, FastAPI, Hugging Face Transformers and PyTorch.</p>
+                    <p><a class="text-link" href="https://github.com/Bezimienii/PG-IUI-NER-API">Code on GitHub</a></p>
+                </article>
+                <article class="minor">
+                    <h4>Road-sign classifier</h4>
+                    <p class="project__meta">Team of two</p>
+                    <p>A convolutional network that recognises Polish road signs, tuned with automated hyperparameter sweeps and tested on 687 photos we collected ourselves.</p>
+                    <p class="built-with">Built with Keras, NumPy and Weights &amp; Biases.</p>
+                    <p><a class="text-link" href="https://github.com/MikolekN/deep-learning-basics">Code on GitHub</a></p>
+                </article>
+                <article class="minor">
+                    <h4>Matrix multiplication in CUDA and OpenMP</h4>
+                    <p class="project__meta">Solo course project</p>
+                    <p>Naive and optimised versions on an RTX 4070 Ti and an i7-13700K. Shared-memory tiling made the CUDA kernel 1.4–1.7× faster than the naive one; cache blocking made the OpenMP version up to 4.7× faster than its naive version at the same thread count.</p>
+                    <p class="built-with">Built with C, CUDA and OpenMP.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section frame" id="education" aria-labelledby="education-title">
+            <h2 id="education-title">Education</h2>
+
+            <article class="entry">
+                <p class="entry__dates">Feb 2024 – Nov 2025</p>
+                <div class="entry__body">
+                    <h3>MSc Eng. in Computer Science</h3>
+                    <p class="entry__org">Gdańsk University of Technology</p>
+                    <p>Specialisation in Distributed Applications and Internet Systems. Final grade 5.0 (very good, on the Polish 2–5 scale), thesis graded 5.0. Coursework in parallel programming with MPI, OpenMP and CUDA.</p>
+                </div>
+            </article>
+
+            <article class="entry">
+                <p class="entry__dates">Oct 2020 – Jan 2024</p>
+                <div class="entry__body">
+                    <h3>BSc Eng. in Computer Science</h3>
+                    <p class="entry__org">Gdańsk University of Technology</p>
+                    <p>Intelligent Interactive Systems profile. Thesis graded 5.0.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="section frame" id="skills" aria-labelledby="skills-title">
+            <h2 id="skills-title">Skills</h2>
+            <dl class="skills">
+                <div>
+                    <dt>Programming languages</dt>
+                    <dd>Python, C#, TypeScript, JavaScript</dd>
+                </div>
+                <div>
+                    <dt>Backend</dt>
+                    <dd>ASP.NET Core, FastAPI, Flask, NestJS, Node.js, REST APIs</dd>
+                </div>
+                <div>
+                    <dt>Frontend and mobile</dt>
+                    <dd>Vue.js, React, Flutter</dd>
+                </div>
+                <div>
+                    <dt>Documents and data</dt>
+                    <dd>XML and XML Schema, lxml, Jinja2, Typst, OpenXML SDK, MongoDB</dd>
+                </div>
+                <div>
+                    <dt>Quality and delivery</dt>
+                    <dd>xUnit, automated testing, GitLab CI/CD, Docker, Git, code review</dd>
+                </div>
+                <div>
+                    <dt>Process mining</dt>
+                    <dd>PM4Py, XES event logs, BPMN, Camunda 8</dd>
+                </div>
+                <div>
+                    <dt>Parallel computing and ML</dt>
+                    <dd>MPI, OpenMP, CUDA, PyTorch, Keras, Hugging Face Transformers (coursework and team projects)</dd>
+                </div>
+                <div>
+                    <dt>Spoken languages</dt>
+                    <dd>Polish (native), English (C1: Cambridge B2 First, passed at C1 level)</dd>
+                </div>
+            </dl>
+        </section>
+
+        <section class="section frame contact" id="contact" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contact</h2>
+            <p class="contact__intro">Email is the quickest way to reach me. I’m open to software developer roles from November 2026, in Gdańsk, Gdynia or Sopot, or remote.</p>
+            <p class="contact__email">
+                <a href="mailto:mikolaj.nadzieja@wp.pl">mikolaj.nadzieja@wp.pl</a>
+                <button class="copy-button" type="button" data-copy="mikolaj.nadzieja@wp.pl">Copy email</button>
+            </p>
+            <ul class="contact__list">
+                <li>
+                    <span class="contact__label">Phone</span>
+                    <a href="tel:+48508658445">+48&nbsp;508&nbsp;658&nbsp;445</a>
+                    <button class="copy-button" type="button" data-copy="+48 508 658 445">Copy number</button>
+                </li>
+                <li>
+                    <span class="contact__label">LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/mikolaj-nadzieja/">linkedin.com/in/mikolaj-nadzieja</a>
+                </li>
+                <li>
+                    <span class="contact__label">GitHub</span>
+                    <a href="https://github.com/MikolekN">github.com/MikolekN</a>
+                </li>
+                <li>
+                    <span class="contact__label">Location</span>
+                    <span>Gdańsk, Poland</span>
+                </li>
+            </ul>
+            <p class="visually-hidden" role="status" aria-live="polite" data-copy-status></p>
+        </section>
+    </main>
+
+    <footer class="site-footer frame">
+        <p>© 2026 Mikołaj Nadzieja</p>
+        <p class="site-footer__consent">I consent to the processing of the personal data on this page for current and future recruitment processes.</p>
     </footer>
 
-    <script type="module" src="./scripts/copy_contact_detail.js"></script>
-    <script type="module" src="./scripts/scroll_to_projects.js"></script>
-    <script type="module" src="./scripts/scroll_to_contact.js"></script>
+    <script src="./scripts/main.js" defer></script>
 </body>
-
 </html>
